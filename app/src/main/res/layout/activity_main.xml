@@ -17,12 +17,12 @@
         android:text="基本创建"/>
 
     <Button
-        android:id="@+id/flap_map_btn"
+        android:id="@+id/merge_btn"
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_margin="10dp"
         android:gravity="center"
         android:layout_gravity="center_horizontal"
-        android:text="flatMap"/>
+        android:text="合并操作"/>
 
 </LinearLayout>

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,10 +14,6 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
@@ -31,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.base_btn)
     Button baseBtn;
-    @BindView(R.id.flap_map_btn)
-    Button flapMapBtn;
+    @BindView(R.id.merge_btn)
+    Button mergeBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void baseCreate() {
-        Intent toCreateIntent = new Intent(this,BaseCreateActivity.class);
+        Intent toCreateIntent = new Intent(this, BaseCreateActivity.class);
         startActivity(toCreateIntent);
     }
 
-    private void flatMap(){
+    private void flatMap() {
         Observable<String> observable = Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
@@ -58,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         });
         observable.flatMap(new Function<String, ObservableSource<String>>() {
             @Override
-            public ObservableSource<String > apply(String s) throws Exception {
-                return Observable.just(s + "1",s + "2",s + "3");
+            public ObservableSource<String> apply(String s) throws Exception {
+                return Observable.just(s + "1", s + "2", s + "3");
             }
         }).subscribe(new Consumer<String>() {
             @Override
@@ -69,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.base_btn, R.id.flap_map_btn})
+    @OnClick({R.id.base_btn, R.id.merge_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.base_btn:
                 baseCreate();
                 break;
-            case R.id.flap_map_btn:
+            case R.id.merge_btn:
                 flatMap();
                 break;
         }
