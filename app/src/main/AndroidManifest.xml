@@ -18,6 +18,12 @@
         </activity>
         <activity android:name=".BaseCreateActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".MergeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FilterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ConditionOrBooleanActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

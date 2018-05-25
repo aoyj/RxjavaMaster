@@ -14,5 +14,38 @@
             android:gravity="center"
             android:layout_gravity="center_horizontal"
             android:text="Concat"/>
+        <Button
+            android:id="@+id/startWith_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="StartWith"/>
+        <Button
+            android:id="@+id/merge_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="Merge"/>
+
+        <Button
+            android:id="@+id/zip_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="Zip"/>
+        <Button
+            android:id="@+id/combineLastest_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="CombineLastest"/>
     </LinearLayout>
 </ScrollView>

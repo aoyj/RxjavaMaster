@@ -10,12 +10,6 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.ObservableSource;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
 
 /**
  * Created by drizzt on 2018/5/16.
@@ -28,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     Button baseBtn;
     @BindView(R.id.merge_btn)
     Button mergeBtn;
+    @BindView(R.id.filter_btn)
+    Button filterBtn;
+    @BindView(R.id.boolean_btn)
+    Button booleanBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,38 +39,36 @@ public class MainActivity extends AppCompatActivity {
         startActivity(toCreateIntent);
     }
 
-    private void flatMap() {
-        Observable<String> observable = Observable.create(new ObservableOnSubscribe<String>() {
-            @Override
-            public void subscribe(ObservableEmitter<String> e) throws Exception {
-                e.onNext("a");
-                e.onNext("b");
-                e.onNext("c");
-                e.onComplete();
-            }
-        });
-        observable.flatMap(new Function<String, ObservableSource<String>>() {
-            @Override
-            public ObservableSource<String> apply(String s) throws Exception {
-                return Observable.just(s + "1", s + "2", s + "3");
-            }
-        }).subscribe(new Consumer<String>() {
-            @Override
-            public void accept(String s) throws Exception {
-
-            }
-        });
+    private void toMergeOperator() {
+        Intent toCreateIntent = new Intent(this, MergeActivity.class);
+        startActivity(toCreateIntent);
     }
 
-    @OnClick({R.id.base_btn, R.id.merge_btn})
+    private void toFilterOperator() {
+        Intent toCreateIntent = new Intent(this, FilterActivity.class);
+        startActivity(toCreateIntent);
+    }
+
+    @OnClick({R.id.base_btn, R.id.merge_btn, R.id.filter_btn,R.id.boolean_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.base_btn:
                 baseCreate();
                 break;
             case R.id.merge_btn:
-                flatMap();
+                toMergeOperator();
+                break;
+            case R.id.filter_btn:
+                toFilterOperator();
+                break;
+            case R.id.boolean_btn:
+                toBooleanOperator();
                 break;
         }
+    }
+
+    private void toBooleanOperator() {
+        Intent toCreateIntent = new Intent(this, ConditionOrBooleanActivity.class);
+        startActivity(toCreateIntent);
     }
 }
