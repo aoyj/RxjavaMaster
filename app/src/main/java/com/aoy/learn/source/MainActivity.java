@@ -26,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
     Button filterBtn;
     @BindView(R.id.boolean_btn)
     Button booleanBtn;
+    @BindView(R.id.polymerization_btn)
+    Button polymerizationBtn;
+    @BindView(R.id.convert_btn)
+    Button convertBtn;
+    @BindView(R.id.transformation_btn)
+    Button transformationBtn;
+    @BindView(R.id.retry_btn)
+    Button retryBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(toCreateIntent);
     }
 
-    @OnClick({R.id.base_btn, R.id.merge_btn, R.id.filter_btn,R.id.boolean_btn})
+    @OnClick({R.id.base_btn, R.id.merge_btn, R.id.filter_btn, R.id.boolean_btn, R.id.polymerization_btn, R.id.convert_btn, R.id.transformation_btn,R.id.retry_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.base_btn:
@@ -64,11 +72,43 @@ public class MainActivity extends AppCompatActivity {
             case R.id.boolean_btn:
                 toBooleanOperator();
                 break;
+            case R.id.polymerization_btn:
+                toPolymerizationOperator();
+                break;
+            case R.id.convert_btn:
+                toConvertOperator();
+                break;
+            case R.id.transformation_btn:
+                toTransformationOperator();
+                break;
+            case R.id.retry_btn:
+                toRetryOperator();
+                break;
         }
     }
 
     private void toBooleanOperator() {
         Intent toCreateIntent = new Intent(this, ConditionOrBooleanActivity.class);
         startActivity(toCreateIntent);
+    }
+
+    public void toPolymerizationOperator() {
+        Intent toCreateIntent = new Intent(this, PolymerizationActivity.class);
+        startActivity(toCreateIntent);
+    }
+
+    public void toConvertOperator() {
+        Intent toConvertIntent = new Intent(this, ConverActivity.class);
+        startActivity(toConvertIntent);
+    }
+
+    public void toTransformationOperator() {
+        Intent toConvertIntent = new Intent(this, TransformationActivity.class);
+        startActivity(toConvertIntent);
+    }
+
+    public void toRetryOperator(){
+        Intent toConvertIntent = new Intent(this, RetryActivity.class);
+        startActivity(toConvertIntent);
     }
 }

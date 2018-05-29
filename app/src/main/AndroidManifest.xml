@@ -24,6 +24,14 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ConditionOrBooleanActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".PolymerizationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ConverActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TransformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RetryActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -1,78 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <Button
+            android:id="@+id/map_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="Map"/>
+        <Button
+            android:id="@+id/flatMap_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="FlapMap"/>
+        <Button
+            android:id="@+id/flatMapIterable_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="FlapMapIterable"/>
 
         <Button
-            android:id="@+id/base_btn"
+            android:id="@+id/contactMap_btn"
             android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
-            android:text="基本创建"/>
+            android:text="ContactMap"/>
 
         <Button
-            android:id="@+id/merge_btn"
+            android:id="@+id/switchMap_btn"
             android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
-            android:text="合并操作"/>
+            android:text="SwitchMap"/>
+        <Button
+            android:id="@+id/scan_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="Scan"/>
 
+        <Button
+            android:id="@+id/groupBy_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="GroupBy"/>
 
         <Button
-            android:id="@+id/filter_btn"
+            android:id="@+id/buffer_btn"
             android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
-            android:text="过滤操作"/>
+            android:text="Buffer"/>
+
         <Button
-            android:id="@+id/boolean_btn"
+            android:id="@+id/windown_btn"
             android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
-            android:text="条件/boolean操作"/>
-        <Button
-            android:id="@+id/polymerization_btn"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:text="聚合操作"/>
-        <Button
-            android:id="@+id/convert_btn"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:text="转换操作"/>
-        <Button
-            android:id="@+id/transformation_btn"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:text="变换操作"/>
-        <Button
-            android:id="@+id/retry_btn"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:text="错误重试机制"/>
+            android:text="Windown"/>
     </LinearLayout>
 </ScrollView>

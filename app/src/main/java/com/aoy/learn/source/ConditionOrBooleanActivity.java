@@ -259,7 +259,7 @@ public class ConditionOrBooleanActivity extends AppCompatActivity {
 
     private void takeWhileOperator() {
         //takeWhile不发送正好符合条件的数据
-        Observable.just(1, 2, 3, 4)
+        Observable.just(1, 2, 3, 4,2)
                 .takeWhile(new Predicate<Integer>() {
                     @Override
                     public boolean test(Integer integer) throws Exception {
