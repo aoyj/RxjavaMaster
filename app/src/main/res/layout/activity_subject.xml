@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/AsyncSubject"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="AsyncSubject"/>
+    <Button
+        android:id="@+id/BehaviorSubject"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="BehaviorSubject"/>
+    <Button
+        android:id="@+id/PublishSubject"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="PublishSubject"/>
+
+    <Button
+        android:id="@+id/ReplaySubject"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="ReplaySubject"/>
+</LinearLayout>

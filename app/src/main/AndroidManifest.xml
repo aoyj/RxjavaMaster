@@ -32,6 +32,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".RetryActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".SubjectOrSingleActiviyty"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
